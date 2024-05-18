@@ -67,6 +67,7 @@ class Team:
     def CalculateScore(self) -> None:
         for tournament in self.tournaments:
             self.score += tournament.GetScore()
+        self.score /= len(self.tournaments)
     
     def __str__(self):
         return self.code
